@@ -1,0 +1,77 @@
+#Exercicios Vetores teste
+
+
+#Teste Vetores 
+#Pergunta1:
+# Imagine que um cliente, dono de uma escola quer armazenar os nomes dos seguintes alunos: Marcos, Manuel, Paula. Então qual a melhor maneira de criar um vetor com nomes?
+
+alunos <- c ("Marcos", "Manuel", "Paula")
+alunos
+
+#Peerguta2:
+#Agora imagine que este mesmo cliente precisa registrar as idades destes alunos, ou seja, 13, 14 e 8 anos. Qual a melhor forma de fazer isto?
+idades <- c(13, 14, 8)
+idades
+
+#Pergunta3:
+#Considere que uma escola tem três provas e as notas obtidas por 9 alunos são guardadas nos seguintes vetores:
+
+prova1<-c(8,9,5,6,7,8,8,8,5)
+
+prova2<-c(2,3,4,3,6,4,2,9,5)
+
+prova3<-c(1,6,2,9,1,10,2,9,2)
+
+#alternativas resolvidas
+prova3[c(2, 4, 6)] #eleemntos 2, 4 e  6 na prova 3 sao 6, 9, 10  ERRADA
+prova2[prova2 == 7] #erro
+prova1[prova1>7] #elementos em prova 1 maior que 7 sao cinco, sendo acima de - resposta Errada
+length(prova2[prova2!=4]) # sete eleemntos resposta Certa!
+
+#Pergunta 4
+#4 - Considere que uma escola possui 3 provas e armazenou as notas de 8 alunos nestas provas, usando os vetores:
+prova1<-c(3,6,4,2,7,8,5,6)
+
+prova2<-c(6,10,3,6,4,2,7,5)
+
+prova3<-c(10,10,5,7,4,6,2,7)
+
+#alternativas resolvidas
+sum(prova1, prova2, prova3) #retorna a soma de todas as notas #errada
+100* ((prova2-prova1)/prova1) #sobrou
+mean(prova1) #errada
+sum(prova1<prova2) #errada
+
+
+#Pergunta 4
+#Crie um vetor que receba os nomes de cada cliente. Para padronizarmos, imagine que a instituição financeira recebeu 4 clientes: Marcos de Aguiar, Paula Miranda, Emilio Santos, Priscila de Albuquerque
+
+clientes <- c("Marcos de Aguiar", "Paula Miranda", "Emilio Santos",
+              "Priscila de Albuquerque")
+
+#Pergunta 4.1 
+#Ocorreu que a cliente Priscila de Albuquerque acaba de informar que o seu nome foi escrito de
+#forma incorreta. O correto seria Pryscilla de Albuquerque. Descreva como você irá corrigir isto.
+
+clientes
+clientes [4] <- "Pryscilla de Albuquerque"
+clientes
+
+#Pergunta 4.2
+#Com base nas informações sobre os salários de cada cliente que solicita o empréstimo
+#vetor que receba estes salários. Use as informações a seguir fornecidas no cadastro:
+
+salarios <- c(4000, 2500,  1200, 3400)
+
+#Pergunta 4.3
+#Sabendo que os salários informados são os brutos e não os líquidos
+#imagine que após retirar os impostos e gastos básicos,
+#cada indivíduo perde 30% deste salário originalmente informado.
+
+salarios_liquidos <- c(salarios * 70/100) #retira os 30%
+salarios_liquidos
+
+#outra opçao
+salarios1 <- c(4000, 2500,  1200, 3400)
+salarios1<-0.7*salarios1
+salarios1 

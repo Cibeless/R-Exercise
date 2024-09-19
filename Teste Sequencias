@@ -1,0 +1,104 @@
+#TESTE com vetores
+
+
+#1 - Escolha a alternativa correta: D
+
+seq(10,100,10) #gera sequencia de 10 a 100 de 10 em 10
+seq(1,100, 5)#gera sequencia de 1 a 100 de 10 em 5
+rep(1:4, 3) #repteção(sequencia, numero de vezes da sequencia, n de elementos)
+rep(1:4,3) #1 a 4 com sequencia repetida 3 vezes
+
+
+#2 - Sobre a criação de sequências com base em amostras aleatórias indique a alternativa correta:
+ 
+sample(1:50,5) #de um a cinquenta, 5 numeros aleatorios
+
+#c("Cara", "Cora"): Esse comando cria um vetor com dois elementos: "Cara" e "Cora"
+#Ou seja, o conjunto de possíveis valores para a amostragem é { "Cara", "Cora" }.
+#5: Este número especifica o tamanho da amostra. Você quer amostrar 5 elementos no tota
+#replace = TRUE: A amostragem será com reposição
+sample (c("Cara", "cora"), 5, replace = TRUE) #***repete cara ou cora por 5 vezes, podendo repetir (true)
+
+#Ja esse outro exemplo 
+#c(1, 2, 3, 4, 5): Esse comando cria um vetor com cinco elementos: {1, 2, 3, 4, 5}.
+#5: Você está especificando que deseja amostrar 5 elementos.
+#eplace não é especificado: Quando o argumento replace não é fornecido, o valor padrão é FALSE, ou seja, 
+#a amostragem é sem reposição.
+sample(c(1, 2, 3, 4, 5), 5) #representa o lançamento do conjunto, 5 numeros aleatorias sem repetição
+sample(c(1, 2, 3, 4, 5, 6), 2) #reperesenta o lançamento de apenas 2 numeros aleatoris do conjunto
+
+
+#Imagine que após receber 100 pedidos de empréstimos, apenas 30 informaram receber mais de
+#10 salários mínimos. 
+#Imagine que você trabalha na instituição financeira e deseja
+#escolher aleatoriamente 
+#5 diferentes clientes a partir destes 30 para oferecer um empréstimo
+#adicional. Como você faria isto?
+
+escolhidos <- sample(c(1:30), 5, replace = F)
+escolhidos
+
+#criação
+#Crie um vetor chamado numeros contendo os números de 1 a 10.
+# operador c() é usado para concatenar (ou juntar) valores em um vetor. Nesse caso, o operador : está criando uma sequência de 1 a 10, e c() está concatenando essa sequência dentro de um vetor.
+#Uso de c(): O uso de c() aqui é redundante, já que o operador : por si só já gera um vetor. Porém, não há problema em usá-lo, o resultado final é o mesmo.
+numeros  <- c(1:10)
+numeros
+
+#acesso
+#Dado o vetor letras <- c("a", "b", "c", "d", "e", "f"), acesse e mostre o terceiro elemento desse vetor.
+letras <- c("a", "b", "c", "d", "e", "f")
+letras[3]
+
+#modificação --- Erro
+#No vetor letras da questão anterior, substitua o segundo elemento por "z".
+letras[2] <- "z" #letras segundo elemento recebe Z
+letras
+
+
+#Operações 
+#Crie dois vetores x <- c(1, 2, 3) e y <- c(4, 5, 6)
+#Some os dois vetores e armazene o resultado em um novo vetor chamado soma.
+#soa dos dois vetores
+x <- c(1, 2, 3)
+y <- c(4, 5, 6)
+soma <- x + y
+soma
+
+#obs se fosse soma de elementos seria assim:
+x <- c(1, 2, 3) 
+y <- c(4, 5, 6)
+sum(x,y)
+
+#Cumprimento de vetores
+#Use a função length() para descobrir o comprimento do vetor numeros <- c(10, 20, 30, 40, 50).
+numeros <- c(10, 20, 30, 40, 50)
+length(numeros)
+
+#Amostragem Aleatória
+#Gere uma amostra de 5 números aleatórios sem reposição do vetor valores <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).
+valores <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+amostra <- sample(valores, 5, replace = F)
+amostra # (valores variam a cada execução)
+
+#Subconjuntos de Vetores-----> ERRO
+#erro nao consegui saber os nueos
+#Dado o vetor idade <- c(22, 35, 18, 44, 29), crie um novo vetor que contenha apenas os valores maiores que 25.
+idade <- c(22, 35, 18, 44, 29)
+idade_maior <- idade[idade>25]
+idade_maior
+
+#Remover Elementos do Vetor definitvamente
+#No vetor idade da questão anterior, remova o terceiro elemento.
+idade<- idade [-3]
+idade
+
+#Repetição de Elementos
+#Crie um vetor que repita o valor "R" 6 vezes. Utilize a função rep().
+rep_R <- rep("R",6)
+
+#ERRo
+#Sequências Customizadas
+#Crie um vetor contendo uma sequência de números de 5 a 20, com incremento de 3. Utilize a função seq().
+seq_custom <- seq (5, 20, 3)
+seq_custom
